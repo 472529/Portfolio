@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c67626496e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is a test site for trying out Bootstrap 4</p> 
+</div>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <i class="fab fa-500px fa-2x" alt="logo"></i>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page.html">SVG</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page1.html">BIG LION</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page2.html">Game Review</a>
+    </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page3.html">Game Clips</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page4.html">Media Object</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page5.html">Test</a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+<div class="container">
+  <div class="alert alert-danger alert-dismissible" id="myAlert">
+    <button type="button" class="close">&times;</button>
+    <strong>OH GOD OH WHY!</strong> This alert box could indicate a dangerous or negative action.
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $(".close").click(function(){
+    $("#myAlert").alert("close");
+  });
+});
+</script>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Duck</h3>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanimalogic.ca%2Fwp-content%2Fuploads%2F2018%2F05%2Fshutterstock_633482957.jpg&f=1&nofb=1" alt="duck" style="width:200px" data-toggle="tooltip" title="Duck">
+    </div>
+    <div class="col-sm-4">
+      <h3>Cat</h3>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.iKvxjqR-ApZAb52EcbwY8AHaIi%26pid%3DApi&f=1" alt="cat in tshirt"  style="width:200px" data-toggle="tooltip" title="Cat in T-shirt">
+    </div>
+    <div class="col-sm-4">
+      <h3>Mama Mia!</h3>  
+      <img src="picture.jpg" alt="chef killing himself with pasta gun" style="width:200px" data-toggle="tooltip" title="Chef Killing Himself With Pasta Gun"
+    </div>
+  </div>
+</div>
+
+    <div class="container">
+      <h2>Modal Example</h2>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-toggle="tooltip" title="Open Modal">
+        Open modal
+      </button>
+
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <div class="modal-header">
+              <h4 class="modal-title">Lorem ipsum</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt ligula at tincidunt blandit. Integer ultrices dignissim tincidunt. Praesent ut condimentum tellus, ut vehicula quam. Vivamus vel dictum turpis. Nulla commodo imperdiet sem. Sed commodo viverra leo, vitae sodales dui vehicula sit amet. Vivamus sollicitudin euismod euismod. Nam cursus risus eu mauris sollicitudin ultricies
+            </div>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+<br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2Fe%2Fe%2F7%2F560315.jpg&f=1&nofb=1" alt="Waterfall" width="1100" height="500" data-toggle="tooltip" title="Waterfall">
+    </div>
+    <div class="carousel-item">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fjooinn.com%2Fimages%2Fblossoming-tree-58.png&f=1&nofb=1" alt="Tree in field" width="1100" height="500" data-toggle="tooltip" title="Pink Tree In Field">
+    </div>
+    <div class="carousel-item">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frealworldscenery.com%2Fwp-content%2Fuploads%2F2018%2F11%2FScreenshot_11-6.jpg&f=1&nofb=1" alt="Plane in the sky" width="1100" height="500" data-toggle="tooltip" title="Plane In The Sky">
+    </div>
+  </div>
+  
+  <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<br>   
+<div class="container">
+  <form class="form-inline" action="">
+    <label for="email2" class="mb-2 mr-sm-2">Email:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+    <label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+    <div class="form-check mb-2 mr-sm-2">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" name="remember"> Remember me
+      </label>
+    </div>    
+    <button data-toggle="tooltip" title="Submit Button" type="submit" class="btn btn-primary mb-2">Submit</button>
+</div>
+
+<!--frame breaker-->
+<script type="text/javascript">
+  if (window.top !== window.self) {
+     window.top.location = window.self.location;
+  }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+</body>
+</html>
+

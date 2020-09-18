@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/c67626496e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is a test site for trying out Bootstrap 4</p> 
+</div>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <i class="fab fa-500px fa-2x" alt="logo"></i>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page.html">SVG</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page1.html">BIG LION</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page2.html">Game Review</a>
+    </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page3.html">Game Clips</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page4.html">Media Object</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="page5.html">Test</a>
+    </li>
+  </ul>
+</nav>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Circle</h3>
+      <svg viewBox="0 -15 200 100">
+  <circle r="10" fill="red">
+    <animateMotion dur="10s" repeatCount="indefinite"
+      path="M20,50 C20,-50 180,15 180,50 C180-50 20,150 20,50 z" />
+  </circle>
+</svg> 
+    </div>
+    <div class="col-sm-4">
+      <h3>Rounded Square</h3>
+        <svg width="400" height="400">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"
+          style="fill:blue;stroke:purple;stroke-width:9;fill-rule:evenodd;" />
+        </svg>
+    </div>
+    <div class="col-sm-4">
+      <h3>Logo</h3>  
+        <svg height="2000" width="999">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="10%" style="stop-color:rgb(0,100,255);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(255,0,255);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="90" rx="85" ry="55" fill="url(#grad1)" />
+          <text fill="#2A3439" font-size="45" font-family="Sans  " x="50" y="86">Bootstrap</text>
+          <text fill="#2A3439" font-size="45" font-family="Sans  " x="30" y="86">Bootstrap</text>
+          <text fill="#2A3439" font-size="45" font-family="Sans  " x="70" y="86">Bootstrap</text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+    </div>
+  </div>
+</div>
+<!--frame breaker-->
+<script type="text/javascript">
+  if (window.top !== window.self) {
+     window.top.location = window.self.location;
+  }
+</script>
+</body>
+</html>
