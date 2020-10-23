@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fox : MonoBehaviour
 {
-    public float speed = 2;
+    [SerializeField] public float speed = 2;
 
     Rigidbody2D rb;
     Animator animator;
@@ -13,10 +13,14 @@ public class fox : MonoBehaviour
     const float groundCheckRadius = 0.2f;
     float horizontalValue;
     float runSpeedModifier = 2f;
-    [SerializeField] bool isGrounded = false;
-    bool isRunning = false;
+    [SerializeField] float jumpPower = 10;
+    [SerializeField] bool isGrounded;
+    bool isRunning;
     bool facingRight = true;
-    
+    bool jump;
+
+
+
 
     void Awake()
     {
@@ -33,13 +37,21 @@ public class fox : MonoBehaviour
             isRunning = true;
         if (Input.GetKeyUp(KeyCode.LeftShift))
             isRunning = false;
+
+        if (Input.GetButtonDown("Jump"))
+            jump = true;
+
+        else if (Input.GetButtonUp("Jump"))
+            jump = false;
+        
+
        
     }
 
     void FixedUpdate()
     {
         GroundCheck();
-        Move(horizontalValue);
+        Move(horizontalValue, jump);
     }
 
     void GroundCheck()
@@ -51,8 +63,15 @@ public class fox : MonoBehaviour
             isGrounded = true;
     }
 
-    void Move(float dir)
+    void Move(float dir, bool jumpFlag)
     {
+        if(isGrounded && jumpFlag)
+        {
+            isGrounded = false;
+            jumpFlag = false;
+            rb.AddForce(new Vector2(0f, jumpPower));
+        }
+
         float xVal = dir * speed * 100 * Time.fixedDeltaTime;
 
         if (isRunning)
