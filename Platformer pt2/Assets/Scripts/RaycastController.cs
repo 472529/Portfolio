@@ -6,7 +6,7 @@ public class RaycastController : MonoBehaviour
 {
     public LayerMask collisionMask;
 
-    public const float skinWidth = .015f;
+    public const float skinWidth = .1f;
     public int horizontalRayCount = 4;
     public int verticalRayCount = 4;
     [HideInInspector]
@@ -17,9 +17,13 @@ public class RaycastController : MonoBehaviour
     public BoxCollider2D collider;
     public RaycastOrigins raycastOrigins;
 
-    public virtual void Start()
+    public virtual void Awake()
     {
         collider = GetComponent<BoxCollider2D> ();
+    }
+
+    public virtual void Start()
+    {
         CalculateRaySpacing();
     }
 
